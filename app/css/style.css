@@ -1,0 +1,158 @@
+/*///tells the browser to read the css file as UTF-8. 
+This is handy if you CSS contains unicode characters and not only ASCII.*/
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-facebook32, .facebook32 {
+  background-image: url(../images/spriteSheet.png);
+  background-position: 0px 0px;
+  width: 32px;
+  height: 32px; }
+
+.icon-soundcloud32, .soundcloud32 {
+  background-image: url(../images/spriteSheet.png);
+  background-position: -32px 0px;
+  width: 32px;
+  height: 32px; }
+
+.icon-twitter32, .twitter32 {
+  background-image: url(../images/spriteSheet.png);
+  background-position: 0px -32px;
+  width: 32px;
+  height: 32px; }
+
+.icon-youtube32, .youtube32 {
+  background-image: url(../images/spriteSheet.png);
+  background-position: -32px -32px;
+  width: 32px;
+  height: 32px; }
+
+/*//// method for importing .css file into .scss files  ////*/
+/*VARS*/
+body {
+  font-family: Tahoma, Geneva, sans-serif;
+  height: 100%;
+  /*for top padding normally 70px */
+  padding-top: 51px !important;
+  width: 100%; }
+
+body, html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+div {
+  outline: 1px dashed #f00; }
+
+.red {
+  background: grey;
+  outline: 1px dashed #f00; }
+
+.no-radius {
+  border-radius: 0 !important; }
+
+.size-300x250 {
+  height: 248px;
+  width: 298px; }
+
+.size-336x280 {
+  height: 278px;
+  width: 334px; }
+
+.size-160x600 {
+  height: 598px;
+  width: 158px; }
+
+.size-728x90 {
+  height: 88px;
+  width: 726px; }
+
+.size-300x600 {
+  height: 598px;
+  width: 298px; }
+
+.zIndex {
+  z-index: 1; }
+
+.navbar-inverse {
+  background-color: #520a00; }
+
+.padding-topper {
+  padding: 20px 0 20px 0; }
+
+.img-height img {
+  margin: 0 auto;
+  max-height: 400px;
+  position: relative;
+  width: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+/* FOOTER ICONS */
+.facebook32 {
+  cursor: pointer; }
+
+.soundcloud32 {
+  cursor: pointer; }
+
+.twitter32 {
+  cursor: pointer; }
+
+.youtube32 {
+  cursor: pointer; }
+
+/*FOOTER*/
+.footerControl {
+  height: 40px; }
+
+.footer-icon-container {
+  background-color: #fff;
+  display: inline-block;
+  height: 32px;
+  margin: 20px auto 20px auto;
+  position: relative;
+  width: 100%; }
+
+.footer-icon-container ul {
+  margin: 0;
+  padding: 0; }
+
+.footer-icon-container li {
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  list-style: none;
+  padding: 0 20px 0 0; }
+
+.footer-icon-container-inside {
+  height: 32px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  width: 100%; }
+
+/* IMAGES */
+.images {
+  position: absolute; }
+
+/*.img1 {
+	@extend .images, .icon-img1;
+	left: -165px;
+};*/
