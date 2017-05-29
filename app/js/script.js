@@ -84,10 +84,10 @@ run = {
 
 		//Carousel Controls
 		run.myCarousel.carousel({
-		  interval: 4000
+		  interval: 5000
 		});
 		run.myCarousel.on('slide.bs.carousel', function () {
-		  //myCarousel.carousel('pause');
+		  myCarousel.carousel('pause');
 		  console.log('Slide Complete');
 		});
 

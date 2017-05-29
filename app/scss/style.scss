@@ -11,7 +11,7 @@ This is handy if you CSS contains unicode characters and not only ASCII.*/
 $black: #000;
 $white: #fff;
 $green: #008000;
-$blue-green: #01a3ba;
+$blueGreen: #01a3ba;
 $grey: #CCC;
 $red: #f00;
 
@@ -160,3 +160,17 @@ div {
 	@extend .images, .icon-img1;
 	left: -165px;
 };*/
+
+/* MODAL WINDOW */
+.modal-header {
+	background: $blueGreen;
+}
+
+.modal-title {
+	color: $white;
+}
+
+.modal .btn-default {
+	background: $blueGreen;
+	color: $white;
+}
