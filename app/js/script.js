@@ -81,18 +81,16 @@ run = {
 
 	//MAIN ANIMATION
 	control: function(){
-
-		//Carousel Controls
-		run.myCarousel.carousel({
-		  interval: 5000
-		});
-		run.myCarousel.on('slide.bs.carousel', function () {
-		  myCarousel.carousel('pause');
-		  console.log('Slide Complete');
-		});
+		/*/Nav Scroll to
+		$('.nav li a')on('click', function(e){
+			e.preventDefault();
+			//var anchor = $(this);
+			//TweenLite.to($('html, body'), run.time - .5, {scrollTop: ($($anchor.attr('href')).offset().top - 70)}, ease:Quad.easeOut);
+		});*/
 
 		//Log in Modal
-		run.logIn.on('click', function(){
+		run.logIn.on('click', function(e){
+			e.preventDefault();
 			run.logInModal.modal();
 			console.log('clicked');
 		});
@@ -101,7 +99,8 @@ run = {
 		$('[data-toggle="tooltip"]').tooltip();
 
 		//Footer Icon fade
-		run.iconFade.hover(function(){
+		run.iconFade.hover(function(e){
+			e.preventDefault();
 			run.fadeIn($(this));
 		}, function (){
 			run.fadeOut($(this));
