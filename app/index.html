@@ -49,13 +49,33 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Sign Up</a></li>
-        <li><a href="#">Log In</a></li>
+        <li id="log-in"><a href="#">Log In</a></li>
       </ul>
     </div>
 
   </div>
 
 </nav>
+
+
+<!--Log In Modal Window-->
+  <div class="modal fade" id="log-in-modal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>This is a small modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!--Jumbotron
@@ -191,10 +211,10 @@
     <div class="footer-icon-container">
           <div class="footer-icon-container-inside">
             <ul class="footer-icon-container">
-              <a href="#"><li class="facebook32 icon-fade"></li></a>
-              <a href="https://soundcloud.com/mrfantastic-music/sets" target="_blank"><li class="soundcloud32 icon-fade"></li></a>
-              <a href="#"><li class="twitter32 icon-fade"></li></a>
-              <a href="https://www.youtube.com/watch?v=Avu5CVv7QsM" target="_blank"><li class="youtube32 icon-fade"></li></a>
+              <a href="#" data-toggle="tooltip" title="facebook" data-placement="right"><li class="facebook32 icon-fade"></li></a>
+              <a href="https://soundcloud.com/mrfantastic-music/sets" target="_blank" data-toggle="tooltip" title="soundcloud" data-placement="right"><li class="soundcloud32 icon-fade"></li></a>
+              <a href="#" data-toggle="tooltip" title="twitter" data-placement="right"><li class="twitter32 icon-fade"></li></a>
+              <a href="https://www.youtube.com/watch?v=Avu5CVv7QsM" target="_blank" data-toggle="tooltip" title="youtube" data-placement="right"><li class="youtube32 icon-fade"></li></a>
             </ul>
           </div>
         </div>

@@ -14,12 +14,24 @@ run = {
 	bannerTime: null,
 	root: window,
 	myCarousel: null,
+	logIn: null,
+	logInModal: null,
+	iconFade: null,
+
+	fadeNum: true,
 
 	init: function(){
 		run.loadSpriteSheet();
-		run.myCarousel = document.getElementById('myCarousel');
+	},
+
+	setUpElements: function(){
+		run.myCarousel = $('#myCarousel');
+		run.logIn = $('#log-in');
+		run.logInModal = $('#log-in-modal');
+		run.iconFade = $('.icon-fade');
 		run.myCarousel.maxheight = '300' + 'px';
-		
+		//
+		run.control();
 	},
 
 	//PRELOAD SPRITESHEETS | IMAGES
@@ -44,17 +56,23 @@ run = {
 	        loadedImages++;
 	        if(loadedImages == imageArr.length){
 	        	//*RUN FUNCTION HERE*
-	        	run.control();
+	        	run.setUpElements();
 	        }
 	    };
 
 	},
 
-	//ALL EVENT LISTENERS
-	eventListeners: function(object){
-		
+	//FADE IN 
+	fadeIn: function(object){
+		TweenLite.to(object, run.time - .5, {alpha: .5, ease:Quad.easeOut});
+		//console.log('fadeOut = ', object);	
 	},
 
+	//FADE OUT 
+	fadeOut: function(object){
+		TweenLite.to(object, run.time - .5, {alpha: 1, ease:Quad.easeOut});
+		//console.log('fadeOut = ', object);
+	},
 
 	//KILL TWEENS
 	killTweens: function(object){
@@ -64,15 +82,33 @@ run = {
 	//MAIN ANIMATION
 	control: function(){
 
-		/*/Carousel Controls
+		//Carousel Controls
 		run.myCarousel.carousel({
 		  interval: 4000
 		});
 		run.myCarousel.on('slide.bs.carousel', function () {
 		  //myCarousel.carousel('pause');
 		  console.log('Slide Complete');
-		});*/
-			
+		});
+
+		//Log in Modal
+		run.logIn.on('click', function(){
+			run.logInModal.modal();
+			console.log('clicked');
+		});
+
+		//Tool-Tip
+		$('[data-toggle="tooltip"]').tooltip();
+
+		//Footer Icon fade
+		run.iconFade.hover(function(){
+			run.fadeIn($(this));
+		}, function (){
+			run.fadeOut($(this));
+		});
+
+
+		
 		
 	}
 	
