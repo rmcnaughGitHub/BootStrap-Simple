@@ -28,7 +28,11 @@ run = {
 		run.myCarousel = $('#myCarousel');
 		run.logIn = $('#log-in');
 		run.logInModal = $('#log-in-modal');
+		run.contactM = $('#contact');
+		run.contactModal = $('#contact-modal');
 		run.iconFade = $('.icon-fade');
+		run.navliHref = $('.nav li a');
+		run.navOffset = $('.navbar-header').height();
 		run.myCarousel.maxheight = '300' + 'px';
 		//
 		run.control();
@@ -79,19 +83,35 @@ run = {
 		TweenLite.killTweensOf(object);
 	},
 
+	scrollToAnchor: function($Object){
+		var $anchor = $Object;
+		if( $( $anchor.attr('href') ) === '#' ){
+			$( $anchor.attr('href') ) = '';
+		}else {
+			TweenLite.to($('html, body'), run.time - .5, 
+			{scrollTop: ($($anchor.attr('href')).offset().top - run.navOffset), ease:Quad.easeOut});
+		}
+	},
+
 	//MAIN ANIMATION
 	control: function(){
-		/*/Nav Scroll to
-		$('.nav li a')on('click', function(e){
+		//Nav Scroll to
+		run.navliHref.on('click', function(e){
 			e.preventDefault();
-			//var anchor = $(this);
-			//TweenLite.to($('html, body'), run.time - .5, {scrollTop: ($($anchor.attr('href')).offset().top - 70)}, ease:Quad.easeOut);
-		});*/
+			run.scrollToAnchor( $(this) );
+		});
 
-		//Log in Modal
+		//Contact Modal
 		run.logIn.on('click', function(e){
 			e.preventDefault();
 			run.logInModal.modal();
+			console.log('clicked');
+		});
+
+		//Log in Modal
+		run.contactM.on('click', function(e){
+			e.preventDefault();
+			run.contactModal.modal();
 			console.log('clicked');
 		});
 

@@ -12,6 +12,7 @@ $black: #000;
 $white: #fff;
 $green: #008000;
 $blueGreen: #01a3ba;
+$darkGrey: #232323;
 $grey: #CCC;
 $red: #f00;
 
@@ -77,11 +78,11 @@ div {
 }
 
 .navbar-inverse {
-	background-color: #520a00;
+	background-color: $darkGrey;
 }
 
-.padding-topper{
-	padding: 20px 0 20px 0;
+.padding-bottom{
+	margin: 0 0 20px 0;
 }
 
 .img-height img{
@@ -161,11 +162,6 @@ div {
 	left: -165px;
 };*/
 
-
-/* SECTIONS 
-#theVideo, #section1, #section2, #section3, #contact {
-	
-}*/
 
 /* MODAL WINDOW */
 .modal-header {

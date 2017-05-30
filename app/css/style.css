@@ -90,10 +90,10 @@ div {
   z-index: 1; }
 
 .navbar-inverse {
-  background-color: #520a00; }
+  background-color: #232323; }
 
-.padding-topper {
-  padding: 20px 0 20px 0; }
+.padding-bottom {
+  margin: 0 0 20px 0; }
 
 .img-height img {
   margin: 0 auto;
@@ -156,10 +156,6 @@ div {
 	@extend .images, .icon-img1;
 	left: -165px;
 };*/
-/* SECTIONS 
-#theVideo, #section1, #section2, #section3, #contact {
-	
-}*/
 /* MODAL WINDOW */
 .modal-header {
   background: #01a3ba; }
