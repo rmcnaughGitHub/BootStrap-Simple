@@ -24,20 +24,6 @@ run = {
 		run.loadSpriteSheet();
 	},
 
-	setUpElements: function(){
-		run.myCarousel = $('#myCarousel');
-		run.logIn = $('#log-in');
-		run.logInModal = $('#log-in-modal');
-		run.contactM = $('#contact');
-		run.contactModal = $('#contact-modal');
-		run.iconFade = $('.icon-fade');
-		run.navliHref = $('.nav li a');
-		run.navOffset = $('.navbar-header').height();
-		run.myCarousel.maxheight = '300' + 'px';
-		//
-		run.control();
-	},
-
 	//PRELOAD SPRITESHEETS | IMAGES
 	loadSpriteSheet: function(){
 	    var loadedImages = 0;
@@ -64,6 +50,20 @@ run = {
 	        }
 	    };
 
+	},
+
+	setUpElements: function(){
+		run.myCarousel = $('#myCarousel');
+		run.logIn = $('#log-in');
+		run.logInModal = $('#log-in-modal');
+		run.contactM = $('#contact');
+		run.contactModal = $('#contact-modal');
+		run.iconFade = $('.icon-fade');
+		run.navliHref = $('.nav li a');
+		run.navOffset = $('.navbar-header').height();
+		run.myCarousel.maxheight = '300' + 'px';
+		//
+		run.control();
 	},
 
 	//FADE IN 

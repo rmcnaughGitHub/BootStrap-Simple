@@ -176,3 +176,17 @@ div {
 	background: $blueGreen;
 	color: $white;
 }
+
+/*NO HASH*/
+.no-hash-link {
+	color: #9d9d9d;
+	cursor: pointer;
+	display: block;
+	position: relative;
+    padding: 10px 15px;
+    line-height: 20px;
+}
+
+.no-hash-link:hover{
+	color: $white;
+}
