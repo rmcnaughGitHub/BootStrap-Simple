@@ -93,6 +93,12 @@ run = {
 		}
 	},
 
+	openModalWin: function(objId){
+		var objId = objId.attr('id');
+		console.log('id = ', objId);
+		return objId;//BootStrap open modal win funct
+	},
+
 	//MAIN ANIMATION
 	control: function(){
 		//Nav Scroll to
@@ -102,17 +108,15 @@ run = {
 		});
 
 		//Contact Modal
-		run.logIn.on('click', function(e){
-			e.preventDefault();
-			run.logInModal.modal();
-			console.log('clicked');
-		});
-
-		//Log in Modal
 		run.contactM.on('click', function(e){
 			e.preventDefault();
-			run.contactModal.modal();
-			console.log('clicked');
+			run.openModalWin( run.contactModal.modal() );
+		});
+
+		//Log In Modal
+		run.logIn.on('click', function(e){
+			e.preventDefault();
+			run.openModalWin( run.logInModal.modal() );
 		});
 
 		//Tool-Tip
